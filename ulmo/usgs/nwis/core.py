@@ -26,6 +26,7 @@ import ulmo.waterml.v1_1 as wml
 
 INSTANTANEOUS_URL = "http://waterservices.usgs.gov/nwis/iv/"
 DAILY_URL = "http://waterservices.usgs.gov/nwis/dv/"
+WATER_QUALITY_URL = "http://qwwebservices.usgs.gov/Result/search/"
 
 # configure logging
 LOG_FORMAT = '%(message)s'
@@ -305,6 +306,8 @@ def _get_service_url(service):
         return DAILY_URL
     elif service in ('instantaneous', 'iv'):
         return INSTANTANEOUS_URL
+    elif service in ('water_quality', 'wq'):
+        return WATER_QUALITY_URL
     else:
         raise ValueError("service must be either 'daily' ('dv') or "
                 "'instantaneous' ('iv')")

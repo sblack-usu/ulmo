@@ -6,7 +6,7 @@ dist/
 build/
 ulmo_test_cache/
 .pytest_cache/
-
+.idea/
 # ignore sphinx build dir
 docs/_build/
 
